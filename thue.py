@@ -32,11 +32,6 @@ else:
     a = 0.0
     c = 0.0
 
-st.divider()
-st.subheader("KẾT QUẢ TÍNH THUẾ")
-st.write(f"**Tổng thu nhập:** {tong_thu_nhap:,.0f} VNĐ")
-st.write(f"**Tổng mức giảm trừ:** {tong_giam_tru:,.0f} VNĐ")
-
 if a > 0:
     st.write(f"**Thu nhập tính thuế:** {a:,.0f} VNĐ")
     st.success(f"💵 Tiền thuế phải nộp:\n### {c:,.0f} VNĐ")
