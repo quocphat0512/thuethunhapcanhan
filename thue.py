@@ -10,8 +10,8 @@ if tong_thu_nhap > 0:
     
     giam_tru_ban_than=15500000
     giam_tru_phu_thuoc=6200000
-    tong_giam_tru=giam_tru_ca_nhan + giam_tru_phu_thuoc
-a = tong_thu_nhap + tong_giam_tru
+    tong_giam_tru=giam_tru_ban_than + giam_tru_phu_thuoc
+    a = tong_thu_nhap + tong_giam_tru
 c=0
 if a > 0:
     c = 0.0  
