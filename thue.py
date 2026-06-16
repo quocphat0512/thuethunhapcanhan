@@ -3,7 +3,7 @@ import streamlit as st
 st.title("🧮 Tính Thuế Thu Nhập Cá Nhân của Nguyễn Quốc Phát")
 
 st.divider()
-a = st.number_input("Nhập thu nhập tính thuế của bạn (VNĐ):", min_value=0.0, step=1000000.0, format="%.0f")
+a = st.number_input("Nhập thu nhập tính thuế của bạn")
 if a > 0:
     b = 0
     c = 0.0
