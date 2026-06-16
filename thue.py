@@ -40,10 +40,6 @@ if a > 0:
     st.divider()
     st.subheader("KẾT QUẢ TÍNH THUẾ")
     
-    col1, col2 = st.columns(2)
     
     with col1:
-        st.info(f"📈 Thu nhập chạm mức:\n### Bậc {b}")
-        
-    with col2:
         st.success(f"💵 Tiền thuế phải nộp:\n### {c:,.0f} VNĐ")
