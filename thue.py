@@ -8,7 +8,7 @@ so_nguoi_phu_thuoc = st.number_input("Số người phụ thuộc", min_value=0,
 
 bao_hiem_xa_hoi_bat_buoc = 0.105*tong_thu_nhap
 giam_tru_ban_than = 15500000.0
-giam_tru_phu_thuoc =62000000.0 * so_nguoi_phu_thuoc
+giam_tru_phu_thuoc =6200000.0 * so_nguoi_phu_thuoc
 tong_giam_tru = giam_tru_ban_than + giam_tru_phu_thuoc + bao_hiem_xa_hoi_bat_buoc
 a = 0.0
 c = 0.0
