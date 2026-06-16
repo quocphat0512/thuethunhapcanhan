@@ -7,11 +7,11 @@ st.divider()
 tong_thu_nhap= st.number_input("Nhập thu nhập của bạn ")
 so_nguoi_phu_thuoc= st.number_input("số người phụ thuộc")
 if tong_thu_nhap > 0:
-    
+    bao_hiem_xa_hoi_bat_buoc=0.15*tong_thu_nhap
     giam_tru_ban_than=15500000
     giam_tru_phu_thuoc=6200000*so_nguoi_phu_thuoc
     tong_giam_tru=giam_tru_ban_than + giam_tru_phu_thuoc
-    a = tong_thu_nhap - tong_giam_tru
+    a = tong_thu_nhap - tong_giam_tru - bao_hiem_xa_hoi_bat_buoc
 c=0
 if a > 0:
     c = 0.0  
