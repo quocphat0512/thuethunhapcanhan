@@ -3,7 +3,7 @@ import streamlit as st
 st.title("🧮 Tính thuế thu nhập cá nhân")
 st.divider()
 
-tong_thu_nhap = st.number_input("Nhập thu nhập của bạn (VNĐ)")
+tong_thu_nhap = st.number_input("Nhập thu nhâp của bạn ")
 so_nguoi_phu_thuoc = st.number_input("Số người phụ thuộc")
 
 bao_hiem_xa_hoi_bat_buoc = 0.0
