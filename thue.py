@@ -13,7 +13,7 @@ if tong_thu_nhap > 0:
     tong_giam_tru=giam_tru_ban_than + giam_tru_phu_thuoc
     a = tong_thu_nhap - tong_giam_tru - bao_hiem_xa_hoi_bat_buoc
 c=0
-if a > 0:
+    if a > 0:
     c = 0.0  
 
     if a <= 10000000:
