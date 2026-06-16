@@ -31,7 +31,7 @@ if a > 0:
     else:
         c = (a * 0.35) - 14500000
 
-     st.divider()
+        st.divider()
         st.subheader("KẾT QUẢ TÍNH THUẾ")
         st.write(f"**Tổng thu nhập:** {tong_thu_nhap:,.0f} VNĐ")
         st.write(f"**Tổng mức giảm trừ:** {tong_giam_tru:,.0f} VNĐ")
