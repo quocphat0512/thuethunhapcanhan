@@ -39,7 +39,5 @@ if a > 0:
   
     st.divider()
     st.subheader("KẾT QUẢ TÍNH THUẾ")
-    
-    col1 = st.columns(1)
-    with col1:
+
         st.success(f"💵 Tiền thuế phải nộp:\n### {c:,.0f} VNĐ")
