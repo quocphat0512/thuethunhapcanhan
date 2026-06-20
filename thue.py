@@ -3,28 +3,29 @@ import streamlit as st
 st.title("🧮 Tính thuế thu nhập cá nhân")
 st.divider()
 
-muc_luong = st.number_input("Nhập lương của bạn ")
-thuong = st.number_input("Nhập thưởng của bạn")
-so_nguoi_phu_thuoc = st.number_input("Số người phụ thuộc")
+muc_luong = st.number_input("Nhập lương của bạn", min_value=0.0, step=1000000.0)
+thuong = st.number_input("Nhập thưởng của bạn", min_value=0.0, step=1000000.0)
+so_nguoi_phu_thuoc = st.number_input("Số người phụ thuộc", min_value=0, step=1)
 
 bao_hiem_xa_hoi_bat_buoc = 0.0
-giam_tru_ban_than = 15500000.0  
+giam_tru_ban_than = 15500000.0
 giam_tru_phu_thuoc = 6200000.0 * so_nguoi_phu_thuoc
 a = 0.0
 c = 0.0
 
-if tong_thu_nhap > 0:
-    muc_tran_bhxh_bhyt = 46800000.0  
-    muc_tran_bhtn = 99200000.0       
+if muc_luong > 0 or thuong > 0:
+    muc_tran_bhxh_bhyt = 46800000.0
+    muc_tran_bhtn = 99200000.0
     
     phi_bhxh_bhyt = min(muc_luong, muc_tran_bhxh_bhyt) * 0.095
     phi_bhtn = min(muc_luong, muc_tran_bhtn) * 0.01
     
     bao_hiem_xa_hoi_bat_buoc = phi_bhxh_bhyt + phi_bhtn
-    muc_luong_sau_bhxh = thuong - bao_hiem_xa_hoi_bat_buoc
-
+    
+    thu_nhap_sau_bh = (muc_luong - bao_hiem_xa_hoi_bat_buoc) + thuong
+    
     tong_giam_tru = giam_tru_ban_than + giam_tru_phu_thuoc
-    a = thuong - tong_giam_tru - muc_luong_sau_bhxh
+    a = thu_nhap_sau_bh - tong_giam_tru
 
 if a > 0:
     if a <= 10000000:
