@@ -3,7 +3,8 @@ import streamlit as st
 st.title("🧮 Tính thuế thu nhập cá nhân")
 st.divider()
 
-tong_thu_nhap = st.number_input("Nhập thu nhâp của bạn ")
+muc_luong = st.number_input("Nhập lương của bạn ")
+thuong = st.number_input("Nhập thưởng của bạn")
 so_nguoi_phu_thuoc = st.number_input("Số người phụ thuộc")
 
 bao_hiem_xa_hoi_bat_buoc = 0.0
@@ -16,13 +17,14 @@ if tong_thu_nhap > 0:
     muc_tran_bhxh_bhyt = 46800000.0  
     muc_tran_bhtn = 99200000.0       
     
-    phi_bhxh_bhyt = min(tong_thu_nhap, muc_tran_bhxh_bhyt) * 0.095
-    phi_bhtn = min(tong_thu_nhap, muc_tran_bhtn) * 0.01
+    phi_bhxh_bhyt = min(muc_luong, muc_tran_bhxh_bhyt) * 0.095
+    phi_bhtn = min(muc_luong, muc_tran_bhtn) * 0.01
     
     bao_hiem_xa_hoi_bat_buoc = phi_bhxh_bhyt + phi_bhtn
+    muc_luong_sau_bhxh = thuong - bao_hiem_xa_hoi_bat_buoc
 
     tong_giam_tru = giam_tru_ban_than + giam_tru_phu_thuoc
-    a = tong_thu_nhap - tong_giam_tru - bao_hiem_xa_hoi_bat_buoc
+    a = thuong - tong_giam_tru - muc_luong_sau_bhxh
 
 if a > 0:
     if a <= 10000000:
